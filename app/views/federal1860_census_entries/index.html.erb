@@ -1,6 +1,6 @@
 <h1>Entries in the 1860 Federal Census for Pittsylvania County
 <% if @filter_column %>
-	with <%=@filter_column%>: "<%=@filter_value%>"
+	with <%=@filter_column.titleize%>="<%=@filter_value%>"
 <% end %>
 
 
@@ -85,7 +85,3 @@
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Federal1860 census entry', new_federal1860_census_entry_path %>

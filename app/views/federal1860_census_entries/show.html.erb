@@ -3,179 +3,18 @@
 <p>
 	<% @federal1860_census_entry.class.displayable_attributes.each do |field| %>
 		<% value = @federal1860_census_entry[field] %>
-		<b><%= field %></b>:
+		<b><%= field.titleize %></b>:
+		<sup>
+			<%= link_to("i", 
+						federal1860_census_entries_browse_by_path(:field => field)) %>
+		 </sup>
 		<% if value.blank? %>
 			<i>blank</i>
 		<% else %> 
 			<%= link_to(value, 
 						federal1860_census_entries_path(:filter_key => field, :filter_value => value))
 			 %>
-			 "<%= @federal1860_census_entry[field] %>"
 		 <% end %>
 		<br/>
 	<% end %>
 </p>
-
-<p>
-  <b>Id:</b>
-  <%= @federal1860_census_entry.id %>
-</p>
-
-<p>
-  <b>House number:</b>
-  <%= @federal1860_census_entry.house_number %>
-</p>
-
-<p>
-  <b>Family number:</b>
-  <%= @federal1860_census_entry.family_number %>
-</p>
-
-<p>
-  <b>Last name:</b>
-  <%= @federal1860_census_entry.last_name %>
-</p>
-
-<p>
-  <b>First name:</b>
-  <%= @federal1860_census_entry.first_name %>
-</p>
-
-<p>
-  <b>Middle initial:</b>
-  <%= @federal1860_census_entry.middle_initial %>
-</p>
-
-<p>
-  <b>Age:</b>
-  <%= @federal1860_census_entry.age %>
-</p>
-
-<p>
-  <b>Sex:</b>
-  <%= @federal1860_census_entry.sex %>
-</p>
-
-<p>
-  <b>Race:</b>
-  <%= @federal1860_census_entry.race %>
-</p>
-
-<p>
-  <b>Occupation:</b>
-  <%= @federal1860_census_entry.occupation %>
-</p>
-
-<p>
-  <b>Real estate owned:</b>
-  <%= @federal1860_census_entry.real_estate_owned %>
-</p>
-
-<p>
-  <b>Personal estate owned:</b>
-  <%= @federal1860_census_entry.personal_estate_owned %>
-</p>
-
-<p>
-  <b>Place of birth:</b>
-  <%= @federal1860_census_entry.place_of_birth %>
-</p>
-
-<p>
-  <b>Married within year:</b>
-  <%= @federal1860_census_entry.married_within_year %>
-</p>
-
-<p>
-  <b>School within year:</b>
-  <%= @federal1860_census_entry.school_within_year %>
-</p>
-
-<p>
-  <b>Illiterate:</b>
-  <%= @federal1860_census_entry.illiterate %>
-</p>
-
-<p>
-  <b>Other:</b>
-  <%= @federal1860_census_entry.other %>
-</p>
-
-<p>
-  <b>District:</b>
-  <%= @federal1860_census_entry.district %>
-</p>
-
-<p>
-  <b>Post office:</b>
-  <%= @federal1860_census_entry.post_office %>
-</p>
-
-<p>
-  <b>Page number:</b>
-  <%= @federal1860_census_entry.page_number %>
-</p>
-
-<p>
-  <b>Written page number:</b>
-  <%= @federal1860_census_entry.written_page_number %>
-</p>
-
-<p>
-  <b>Notes:</b>
-  <%= @federal1860_census_entry.notes %>
-</p>
-
-<p>
-  <b>Veteran:</b>
-  <%= @federal1860_census_entry.veteran %>
-</p>
-
-<p>
-  <b>Veteran or veteran family:</b>
-  <%= @federal1860_census_entry.veteran_or_veteran_family %>
-</p>
-
-<p>
-  <b>War experience:</b>
-  <%= @federal1860_census_entry.war_experience %>
-</p>
-
-<p>
-  <b>Family structure:</b>
-  <%= @federal1860_census_entry.family_structure %>
-</p>
-
-<p>
-  <b>Found in both:</b>
-  <%= @federal1860_census_entry.found_in_both %>
-</p>
-
-<p>
-  <b>Ldf vet or family:</b>
-  <%= @federal1860_census_entry.ldf_vet_or_family %>
-</p>
-
-<p>
-  <b>Member of veteran family:</b>
-  <%= @federal1860_census_entry.member_of_veteran_family %>
-</p>
-
-<p>
-  <b>Member of veteran household:</b>
-  <%= @federal1860_census_entry.member_of_veteran_household %>
-</p>
-
-<p>
-  <b>Slaveholder 1860:</b>
-  <%= @federal1860_census_entry.slaveholder_1860 %>
-</p>
-
-<p>
-  <b>Slaveholding vet household 1860:</b>
-  <%= @federal1860_census_entry.slaveholding_vet_household_1860 %>
-</p>
-
-
-<%= link_to 'Edit', edit_federal1860_census_entry_path(@federal1860_census_entry) %> |
-<%= link_to 'Back', federal1860_census_entries_path %>
