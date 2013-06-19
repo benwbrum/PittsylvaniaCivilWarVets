@@ -1,0 +1,69 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  house_number: MyString
+  family_number: MyString
+  last_name: MyString
+  first_name: MyString
+  middle_initial: MyString
+  age: 
+  sex: MyString
+  race: MyString
+  occupation: MyString
+  real_estate_owned: 
+  personal_estate_owned: 
+  place_of_birth: MyString
+  married_within_year: false
+  school_within_year: false
+  illiterate: false
+  other: MyString
+  district: MyString
+  post_office: MyString
+  page_number: MyString
+  written_page_number: MyString
+  notes: MyString
+  veteran: false
+  veteran_or_veteran_family: MyString
+  war_experience: MyString
+  family_structure: MyString
+  found_in_both: false
+  ldf_vet_or_family: false
+  member_of_veteran_family: false
+  member_of_veteran_household: false
+  slaveholder_1860: false
+  slaveholding_vet_household_1860: false
+
+two:
+  id: 1
+  house_number: MyString
+  family_number: MyString
+  last_name: MyString
+  first_name: MyString
+  middle_initial: MyString
+  age: 
+  sex: MyString
+  race: MyString
+  occupation: MyString
+  real_estate_owned: 
+  personal_estate_owned: 
+  place_of_birth: MyString
+  married_within_year: false
+  school_within_year: false
+  illiterate: false
+  other: MyString
+  district: MyString
+  post_office: MyString
+  page_number: MyString
+  written_page_number: MyString
+  notes: MyString
+  veteran: false
+  veteran_or_veteran_family: MyString
+  war_experience: MyString
+  family_structure: MyString
+  found_in_both: false
+  ldf_vet_or_family: false
+  member_of_veteran_family: false
+  member_of_veteran_household: false
+  slaveholder_1860: false
+  slaveholding_vet_household_1860: false

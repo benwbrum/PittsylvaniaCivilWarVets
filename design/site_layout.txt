@@ -1,0 +1,33 @@
+Site design for Pittsylvania County Civil War Veterans
+
+
+Navigation modes:
+Search
+Browse
+Analyze
+
+
+Analyze should let researchers (at minimum) re-execute the queries
+Jeff used for the book, comparing before/after valuations.  
+
+Search will be a basic search over the three record sets, likely just
+on name fields.  Likely use case is an alternative for
+FamilySearch/Ancestry/HeritageQuest -- nothing ground-breaking here,
+but useful as an entry point for people exploring.
+
+Browse should let people navigate through lists of occupations, sexes,
+ages, etc, allowing researchers to navigate from records to lists and
+lists to records, as well as (in some cases) from record to record.
+
+
+
+
+
+TODO:
+Get the XLS file with better data imported into the database
+Document limitations on the data
+Extract queries from the .MDB file
+
+
+Deferred ideas:
+Support for data other than CW vet
