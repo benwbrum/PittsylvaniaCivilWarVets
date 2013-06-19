@@ -1,0 +1,33 @@
+<h2>Census Records by <%= @attribute_name %></h2>
+
+
+<table>
+	<thead>
+		<tr>
+			<th>
+				Value
+			</th>
+			<th>
+				Total
+			</th>
+		</tr>
+	
+	</thead>
+	<tbody>
+		<% @value_total_pairs.each do |pair| %>
+		
+			<tr>
+				<td>
+					<%= pair['value'] %>
+				</td>
+				<td>
+					<%= link_to(pair['total'], federal1860_census_entries_path(:filter_key => @attribute_name, :filter_value => pair['value'])) %>
+				</td>
+				
+			</tr>
+		
+		<% end %>
+	
+	</tbody>
+	
+</table>

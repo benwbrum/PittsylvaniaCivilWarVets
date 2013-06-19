@@ -2,7 +2,13 @@ class Federal1860CensusEntriesController < ApplicationController
   # GET /federal1860_census_entries
   # GET /federal1860_census_entries.json
   def index
-    @federal1860_census_entries = Federal1860CensusEntry.all
+    if params['filter_key'].blank?
+      @federal1860_census_entries = Federal1860CensusEntry.all
+    else
+      @filter_column = params['filter_key']
+      @filter_value = params['filter_value']
+      @federal1860_census_entries = Federal1860CensusEntry.where(@filter_column => @filter_value)    
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -80,4 +86,14 @@ class Federal1860CensusEntriesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def browse
+  
+  end
+  
+  def browse_by
+    @attribute_name = params['field']
+    @value_total_pairs = Federal1860CensusEntry.browse_by(@attribute_name)
+  end
+  
 end

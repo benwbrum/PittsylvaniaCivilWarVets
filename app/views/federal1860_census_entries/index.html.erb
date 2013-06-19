@@ -1,4 +1,10 @@
-<h1>Listing federal1860_census_entries</h1>
+<h1>Entries in the 1860 Federal Census for Pittsylvania County
+<% if @filter_column %>
+	with <%=@filter_column%>: "<%=@filter_value%>"
+<% end %>
+
+
+</h1>
 
 <table>
   <tr>
@@ -41,7 +47,7 @@
 
 <% @federal1860_census_entries.each do |federal1860_census_entry| %>
   <tr>
-    <td><%= federal1860_census_entry.id %></td>
+    <td><%= link_to federal1860_census_entry.id, federal1860_census_entry %></td>
     <td><%= federal1860_census_entry.house_number %></td>
     <td><%= federal1860_census_entry.family_number %></td>
     <td><%= federal1860_census_entry.last_name %></td>

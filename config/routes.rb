@@ -1,4 +1,7 @@
 PittsylvaniaCivilWarVets::Application.routes.draw do
+
+  match 'federal1860_census_entries/browse' => 'federal1860_census_entries#browse'
+  match 'federal1860_census_entries/browse_by' => 'federal1860_census_entries#browse_by'
   resources :federal1860_census_entries
 
 
