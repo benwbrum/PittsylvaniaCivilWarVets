@@ -1,0 +1,110 @@
+Pittsylvania County Courthouse Clerk's Office archival survey 2013-06-20
+
+Method: Walk through clerk's office looking for material for 1860 and 1870.  Reject wills, deeds, and court 
+
+Book: Reassessments 1870
+Front matter: None
+Back matter: None
+Dimensions: 2' x 1.5'
+
+All pages pre-printed; all pages the same
+
+Header:
+List of Land within the District of _________ Assessor for the County of _______ in the year 1870
+_________ Township
+
+e.g. "District of William P. Bradshaw, Assessor for the County of Pittsylvania in the year 1870
+Banister Township"
+
+Records per page: 38
+
+Headers
+0: (Unlabeled: column contains entry number for this page)
+1: NAME OF PERSON Who by himself or by his tenant has the freehold in possession of the land charged.
+2: Residence of th eowner of the tract of land.
+3: Nature of the owner's estate, whether held in fee or for life.
+4: Number of acres in each tract.
+5: Name of the tract and description of the land, as to water courses, mountains, contiguous tracts, or other places, on or near which it lies.
+6: Distance and bearing from the courthouse.
+6a: Bearing from C. H.
+6b: Miles.
+7: Value of land per acre, including buildings.
+8: The sum included in the value of each tract of land on account of building.
+9: Total value of the land and buildings.
+10: REMARKS.
+
+Total pages: 150
+Pages with entries: 80%?
+
+e.g.
+12	Brumfield Thos K		Indiana	Fee	19	Old Womans Crk	N	18	2.00	-	38.00
+13	Same [illeg] for Toler Heirs	-	Life	406	Fallen Crk	"	15	3.00	-	1218.00
+
+
+Book: Land Book 1870
+Front matter:
+back matter:
+Dimensions: 2' x 1.5'
+
+Header:
+TABLE OF TRACTS OF LAND FOR THE YEAR 1870
+In _______ County within the District of ______ Commmissioner of the Revenue, with taxes thereon at ____ cents on every Hundred Dollars value thereof
+
+e.g. "Pittsylvania", "R C Herndon", "fifty"
+
+
+
+Headers:
+0: (Unlabeled: column contains entry number for this page)
+1: NAME OF PERSON Who by himself or by his tenant has the freehold in possession of the land charged.
+2: Residence of th eowner of the tract of land.
+3: Nature of the owner's estate, whether held in fee or for life.
+4: Number of acres in each tract.
+5: Name of the tract and description of the land, as to water courses, mountains, or other places, on or near which it lies.
+6: Distance and bearing from the courthouse.
+6a: Bearing from C. H.
+6b: Miles.
+7: Total value of land per acre, including buildings.
+8: The sum included in the value of each tract of land on account of buildings.
+9: Total value of the land and buildings.
+10: The amount of tax on the whole tract at ____ cents on every 100 dollars value thereof.
+11: Explanations of alterations during the preceding year, especially from whom transferred, and when and how the owner derived the land, and why, and upon what authority any alteration was made.
+12: COUNTY LEVY Amount of levy for county purposes.  _____ per centum on the State taxes.
+
+
+
+Book: Land Book 1860
+Dimensions: 2' x 1.5'
+Contents: recto and verso printed pages are identical.
+Total pages: approx. 150
+Pages with entries: ca. 70%
+Entries per page: ca. 35
+Some pages used for calculating totals, others used for certifying the contents of the entries.
+
+Major difference between 1860 and 1870 land book is that 1860 has careful recording of "alterations" for nearly every entry.  1870 leaves this blank with few exceptions.
+
+
+Header:
+List of the Land Tax within the district of ___________, Commissioner of the Revenue in the County of ________ for the year 1860
+e.g. "Absalom Fulller", "Pittsylvania"
+
+1: NAME OF OWNER
+2: RESIDENCE 
+3: Estate whether held in fee simple, for life, &c.
+4: No. of Acres.
+5: Name of Tract.
+6: Description of the land, as to water courses, mountains and contiguous tracs
+7:Distance and bearing from the court house.
+8: Value of land per acre, including buildings.
+9: Sum added to the land on account of buildings.
+10:Total value of the land and buildings.
+11: Amount of tax on the whole tract at the legal ratio
+12: Amount of tax for county purposes
+13: Explanations of alterations during the preceding year, especially from whom transferred, and when and how the owner derived the land.
+
+
+e.g.
+Thos. K. Brumfield	Pittsylva.	fee	686	-	Wts Cherry Stone	5 NW	4	500	2744	10.98	-	from B. A. Davis in
+Jeremiah W. Graves	"		"	203	-	Camp branch		20 NE	11	1500	2233	8.93	-	-
+
+
