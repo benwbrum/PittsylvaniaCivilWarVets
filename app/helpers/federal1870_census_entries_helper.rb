@@ -1,0 +1,2 @@
+module Federal1870CensusEntriesHelper
+end

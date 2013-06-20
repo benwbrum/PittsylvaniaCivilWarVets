@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+	<% @federal1870_census_entry.class.displayable_attributes.each do |field| %>
+		<% value = @federal1870_census_entry[field] %>
+		<b><%= field.titleize %></b>:
+		<sup>
+			<%= link_to("i", 
+						federal1870_census_entries_browse_by_path(:field => field)) %>
+		 </sup>
+		<% if value.blank? %>
+			<i>blank</i>
+		<% else %> 
+			<%= link_to(value, 
+						federal1870_census_entries_path(:filter_key => field, :filter_value => value))
+			 %>
+		 <% end %>
+		<br/>
+	<% end %>
+</p>
