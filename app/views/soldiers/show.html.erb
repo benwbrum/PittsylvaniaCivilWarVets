@@ -1,0 +1,145 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @soldier.name %>
+</p>
+
+<p>
+  <b>Rank:</b>
+  <%= @soldier.rank %>
+</p>
+
+<p>
+  <b>Regiment:</b>
+  <%= @soldier.regiment %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @soldier.company %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @soldier.notes %>
+</p>
+
+<p>
+  <b>Enlistment:</b>
+  <%= @soldier.enlistment %>
+</p>
+
+<p>
+  <b>Enlistment age:</b>
+  <%= @soldier.enlistment_age %>
+</p>
+
+<p>
+  <b>Prewar jobs:</b>
+  <%= @soldier.prewar_jobs %>
+</p>
+
+<p>
+  <b>Awol:</b>
+  <%= @soldier.awol %>
+</p>
+
+<p>
+  <b>Promotions or other jobs:</b>
+  <%= @soldier.promotions_or_other_jobs %>
+</p>
+
+<p>
+  <b>Wounding or illness:</b>
+  <%= @soldier.wounding_or_illness %>
+</p>
+
+<p>
+  <b>Not ill:</b>
+  <%= @soldier.not_ill %>
+</p>
+
+<p>
+  <b>Pow:</b>
+  <%= @soldier.pow %>
+</p>
+
+<p>
+  <b>Death:</b>
+  <%= @soldier.death %>
+</p>
+
+<p>
+  <b>Discharge:</b>
+  <%= @soldier.discharge %>
+</p>
+
+<p>
+  <b>Postwar info:</b>
+  <%= @soldier.postwar_info %>
+</p>
+
+<p>
+  <b>Notes regt:</b>
+  <%= @soldier.notes_regt %>
+</p>
+
+<p>
+  <b>Federal1860 census entry:</b>
+  <%= link_to(@soldier.federal1860_census_entry_id, federal1860_census_entry_path(@soldier.federal1860_census_entry_id)) %>
+</p>
+
+<p>
+  <b>Pensioner:</b>
+  <%= @soldier.pensioner %>
+</p>
+
+<p>
+  <b>Federal1870 census entry:</b>
+  <%= link_to(@soldier.federal1870_census_entry_id, federal1870_census_entry_path(@soldier.federal1870_census_entry_id)) %>
+</p>
+
+<p>
+  <b>Federal1870 family member:</b>
+  <%= @soldier.federal1870_family_member_id %>
+</p>
+
+<p>
+  <b>Wife 1870:</b>
+  <%= @soldier.wife_1870 %>
+</p>
+
+<p>
+  <b>Children 1870:</b>
+  <%= @soldier.children_1870 %>
+</p>
+
+<p>
+  <b>Other family members 1870:</b>
+  <%= @soldier.other_family_members_1870 %>
+</p>
+
+<p>
+  <b>Sutherlin interactions:</b>
+  <%= @soldier.sutherlin_interactions %>
+</p>
+
+<p>
+  <b>Cause of wartime death:</b>
+  <%= @soldier.cause_of_wartime_death %>
+</p>
+
+<p>
+  <b>Id:</b>
+  <%= @soldier.id %>
+</p>
+
+<p>
+  <b>Moved away:</b>
+  <%= @soldier.moved_away %>
+</p>
+
+
+<%= link_to 'Edit', edit_soldier_path(@soldier) %> |
+<%= link_to 'Back', soldiers_path %>

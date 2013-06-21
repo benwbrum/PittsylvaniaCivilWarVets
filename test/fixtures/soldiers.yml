@@ -1,0 +1,61 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  rank: MyString
+  regiment: MyString
+  company: MyString
+  notes: MyString
+  enlistment: MyString
+  enlistment_age: 1.5
+  prewar_jobs: MyString
+  awol: MyString
+  promotions_or_other_jobs: MyString
+  wounding_or_illness: MyString
+  not_ill: MyString
+  pow: MyString
+  death: MyString
+  discharge: MyString
+  postwar_info: MyString
+  notes_regt: MyString
+  federal1860_census_entry_id: 
+  pensioner: MyString
+  federal1870_census_entry_id: 
+  federal1870_family_member_id: 
+  wife_1870: MyString
+  children_1870: MyString
+  other_family_members_1870: MyString
+  sutherlin_interactions: MyString
+  cause_of_wartime_death: MyString
+  id: 
+  moved_away: false
+
+two:
+  name: MyString
+  rank: MyString
+  regiment: MyString
+  company: MyString
+  notes: MyString
+  enlistment: MyString
+  enlistment_age: 1.5
+  prewar_jobs: MyString
+  awol: MyString
+  promotions_or_other_jobs: MyString
+  wounding_or_illness: MyString
+  not_ill: MyString
+  pow: MyString
+  death: MyString
+  discharge: MyString
+  postwar_info: MyString
+  notes_regt: MyString
+  federal1860_census_entry_id: 
+  pensioner: MyString
+  federal1870_census_entry_id: 
+  federal1870_family_member_id: 
+  wife_1870: MyString
+  children_1870: MyString
+  other_family_members_1870: MyString
+  sutherlin_interactions: MyString
+  cause_of_wartime_death: MyString
+  id: 
+  moved_away: false

@@ -1,0 +1,77 @@
+<h1>Listing soldiers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Rank</th>
+    <th>Regiment</th>
+    <th>Company</th>
+    <th>Notes</th>
+    <th>Enlistment</th>
+    <th>Enlistment age</th>
+    <th>Prewar jobs</th>
+    <th>Awol</th>
+    <th>Promotions or other jobs</th>
+    <th>Wounding or illness</th>
+    <th>Not ill</th>
+    <th>Pow</th>
+    <th>Death</th>
+    <th>Discharge</th>
+    <th>Postwar info</th>
+    <th>Notes regt</th>
+    <th>Federal1860 census entry</th>
+    <th>Pensioner</th>
+    <th>Federal1870 census entry</th>
+    <th>Federal1870 family member</th>
+    <th>Wife 1870</th>
+    <th>Children 1870</th>
+    <th>Other family members 1870</th>
+    <th>Sutherlin interactions</th>
+    <th>Cause of wartime death</th>
+    <th>Id</th>
+    <th>Moved away</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @soldiers.each do |soldier| %>
+  <tr>
+    <td><%= soldier.name %></td>
+    <td><%= soldier.rank %></td>
+    <td><%= soldier.regiment %></td>
+    <td><%= soldier.company %></td>
+    <td><%= soldier.notes %></td>
+    <td><%= soldier.enlistment %></td>
+    <td><%= soldier.enlistment_age %></td>
+    <td><%= soldier.prewar_jobs %></td>
+    <td><%= soldier.awol %></td>
+    <td><%= soldier.promotions_or_other_jobs %></td>
+    <td><%= soldier.wounding_or_illness %></td>
+    <td><%= soldier.not_ill %></td>
+    <td><%= soldier.pow %></td>
+    <td><%= soldier.death %></td>
+    <td><%= soldier.discharge %></td>
+    <td><%= soldier.postwar_info %></td>
+    <td><%= soldier.notes_regt %></td>
+    <td><%= soldier.federal1860_census_entry_id %></td>
+    <td><%= soldier.pensioner %></td>
+    <td><%= soldier.federal1870_census_entry_id %></td>
+    <td><%= soldier.federal1870_family_member_id %></td>
+    <td><%= soldier.wife_1870 %></td>
+    <td><%= soldier.children_1870 %></td>
+    <td><%= soldier.other_family_members_1870 %></td>
+    <td><%= soldier.sutherlin_interactions %></td>
+    <td><%= soldier.cause_of_wartime_death %></td>
+    <td><%= soldier.id %></td>
+    <td><%= soldier.moved_away %></td>
+    <td><%= link_to 'Show', soldier %></td>
+    <td><%= link_to 'Edit', edit_soldier_path(soldier) %></td>
+    <td><%= link_to 'Destroy', soldier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Soldier', new_soldier_path %>

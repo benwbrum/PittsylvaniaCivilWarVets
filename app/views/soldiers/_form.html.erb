@@ -1,0 +1,129 @@
+<%= form_for(@soldier) do |f| %>
+  <% if @soldier.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@soldier.errors.count, "error") %> prohibited this soldier from being saved:</h2>
+
+      <ul>
+      <% @soldier.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :rank %><br />
+    <%= f.text_field :rank %>
+  </div>
+  <div class="field">
+    <%= f.label :regiment %><br />
+    <%= f.text_field :regiment %>
+  </div>
+  <div class="field">
+    <%= f.label :company %><br />
+    <%= f.text_field :company %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_field :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :enlistment %><br />
+    <%= f.text_field :enlistment %>
+  </div>
+  <div class="field">
+    <%= f.label :enlistment_age %><br />
+    <%= f.text_field :enlistment_age %>
+  </div>
+  <div class="field">
+    <%= f.label :prewar_jobs %><br />
+    <%= f.text_field :prewar_jobs %>
+  </div>
+  <div class="field">
+    <%= f.label :awol %><br />
+    <%= f.text_field :awol %>
+  </div>
+  <div class="field">
+    <%= f.label :promotions_or_other_jobs %><br />
+    <%= f.text_field :promotions_or_other_jobs %>
+  </div>
+  <div class="field">
+    <%= f.label :wounding_or_illness %><br />
+    <%= f.text_field :wounding_or_illness %>
+  </div>
+  <div class="field">
+    <%= f.label :not_ill %><br />
+    <%= f.text_field :not_ill %>
+  </div>
+  <div class="field">
+    <%= f.label :pow %><br />
+    <%= f.text_field :pow %>
+  </div>
+  <div class="field">
+    <%= f.label :death %><br />
+    <%= f.text_field :death %>
+  </div>
+  <div class="field">
+    <%= f.label :discharge %><br />
+    <%= f.text_field :discharge %>
+  </div>
+  <div class="field">
+    <%= f.label :postwar_info %><br />
+    <%= f.text_field :postwar_info %>
+  </div>
+  <div class="field">
+    <%= f.label :notes_regt %><br />
+    <%= f.text_field :notes_regt %>
+  </div>
+  <div class="field">
+    <%= f.label :federal1860_census_entry_id %><br />
+    <%= f.text_field :federal1860_census_entry_id %>
+  </div>
+  <div class="field">
+    <%= f.label :pensioner %><br />
+    <%= f.text_field :pensioner %>
+  </div>
+  <div class="field">
+    <%= f.label :federal1870_census_entry_id %><br />
+    <%= f.text_field :federal1870_census_entry_id %>
+  </div>
+  <div class="field">
+    <%= f.label :federal1870_family_member_id %><br />
+    <%= f.text_field :federal1870_family_member_id %>
+  </div>
+  <div class="field">
+    <%= f.label :wife_1870 %><br />
+    <%= f.text_field :wife_1870 %>
+  </div>
+  <div class="field">
+    <%= f.label :children_1870 %><br />
+    <%= f.text_field :children_1870 %>
+  </div>
+  <div class="field">
+    <%= f.label :other_family_members_1870 %><br />
+    <%= f.text_field :other_family_members_1870 %>
+  </div>
+  <div class="field">
+    <%= f.label :sutherlin_interactions %><br />
+    <%= f.text_field :sutherlin_interactions %>
+  </div>
+  <div class="field">
+    <%= f.label :cause_of_wartime_death %><br />
+    <%= f.text_field :cause_of_wartime_death %>
+  </div>
+  <div class="field">
+    <%= f.label :id %><br />
+    <%= f.text_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :moved_away %><br />
+    <%= f.check_box :moved_away %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
