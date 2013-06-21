@@ -1,14 +1,32 @@
-<h2>Census Records by <%= @attribute_name.titleize %></h2>
+<h2>Federal 1870 Census Records by <%= @attribute_name.titleize %></h2>
 
 
 <table>
 	<thead>
 		<tr>
 			<th>
-				Value
+				<%= @attribute_name.titleize %>
 			</th>
 			<th>
-				Total
+				Number of Entries
+			</th>
+			<th>
+				Average Real Estate ($)
+			</th>
+			<th>
+				Average Personal Estate ($)
+			</th>
+			<th>
+				Maximum Real Estate ($)
+			</th>
+			<th>
+				Maximum Personal Estate ($)
+			</th>
+			<th>
+				Entries with Non-Blank Real Estate  (%)
+			</th>
+			<th>
+				Entries with Non-Blank Personal Estate (%) 
 			</th>
 		</tr>
 	
@@ -22,6 +40,24 @@
 				</td>
 				<td>
 					<%= link_to(pair['total'], federal1870_census_entries_path(:filter_key => @attribute_name, :filter_value => pair['value'])) %>
+				</td>
+				<td>
+					<%= pair['avg_re'] %>
+				</td>
+				<td>
+					<%= pair['avg_pe'] %>
+				</td>
+				<td>
+					<%= pair['max_re'] %>
+				</td>
+				<td>
+					<%= pair['max_pe'] %>
+				</td>
+				<td>
+					<%= pair['pct_blank_re'].to_i %>
+				</td>
+				<td>
+					<%= pair['pct_blank_pe'].to_i %>
 				</td>
 				
 			</tr>

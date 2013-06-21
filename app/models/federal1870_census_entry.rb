@@ -8,6 +8,11 @@ class Federal1870CensusEntry < ActiveRecord::Base
     "id"
   ]
   
+  
+  def self.display_year
+    '1870'
+  end
+  
   def self.browsable_attributes
     self.accessible_attributes - SUPPRESSED_ATTRIBUTES
   end
@@ -16,9 +21,15 @@ class Federal1870CensusEntry < ActiveRecord::Base
     self.accessible_attributes - SUPPRESSED_ATTRIBUTES
   end
   
-  
   def self.browse_by(attribute_name)
-    return self.select("#{attribute_name} as value, count(*) total").group(attribute_name)
+    return self.select("#{attribute_name} as value, 
+                        count(*) total, 
+                        avg(if(real_estate_owned is null, 0, real_estate_owned)) avg_re, 
+                        avg(if(personal_estate_owned is null, 0, personal_estate_owned)) avg_pe, 
+                        max(if(real_estate_owned is null, 0, real_estate_owned)) max_re, 
+                        max(if(personal_estate_owned is null, 0, personal_estate_owned)) max_pe, 
+                        round((count(real_estate_owned)/count(*)) * 100) pct_blank_re, 
+                        round((count(personal_estate_owned)/count(*)) * 100) pct_blank_pe").group(attribute_name)
   end
 
 
