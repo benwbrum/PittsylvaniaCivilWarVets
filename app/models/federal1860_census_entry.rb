@@ -17,7 +17,14 @@ class Federal1860CensusEntry < ActiveRecord::Base
   
   
   def self.browse_by(attribute_name)
-    return self.select("#{attribute_name} as value, count(*) total").group(attribute_name)
+    return self.select("#{attribute_name} as value, 
+                        count(*) total, 
+                        avg(real_estate_owned) avg_re, 
+                        avg(personal_estate_owned) avg_pe, 
+                        max(real_estate_owned) max_re, 
+                        max(personal_estate_owned) max_pe, 
+                        round((count(real_estate_owned)/count(*)) * 100) pct_blank_re, 
+                        round((count(personal_estate_owned)/count(*)) * 100) pct_blank_pe").group(attribute_name)
   end
   
 end
