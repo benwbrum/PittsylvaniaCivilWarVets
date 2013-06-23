@@ -15,6 +15,10 @@ class Federal1860CensusEntry < ActiveRecord::Base
     '1860'
   end
   
+  def display_name
+    "#{first_name} #{middle_initial} #{last_name}"
+  end
+  
   
   def self.browsable_attributes
     self.accessible_attributes - SUPPRESSED_ATTRIBUTES

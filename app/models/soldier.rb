@@ -7,4 +7,11 @@ class Soldier < ActiveRecord::Base
   belongs_to :federal1860_census_entry
   belongs_to :federal1870_census_entry
   
+  
+  
+  def display_name
+    "#{name} "
+  end
+  
+  
 end

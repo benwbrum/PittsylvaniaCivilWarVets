@@ -1,5 +1,8 @@
 PittsylvaniaCivilWarVets::Application.routes.draw do
 
+  resources :searches
+
+
   resources :soldiers
 
 

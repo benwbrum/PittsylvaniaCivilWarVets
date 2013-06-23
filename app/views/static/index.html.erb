@@ -6,10 +6,12 @@
 	service records.</i>
 </p>
 
-<p>Search <i>(to-do)</i></p>
+<p><b>Search</b><br/>
+<%= render :partial => 'searches/form' %>
+</p>
 
 
-<p>Browse<br/>
+<p><b>Browse</b><br/>
 <%= link_to('1860 Census', federal1860_census_entries_browse_path) %><br/>
 <%= link_to('1870 Census', federal1870_census_entries_browse_path) %><br/>
 <%= link_to('Soldiers', soldiers_path) %>

@@ -9,9 +9,10 @@ class Federal1870CensusEntry < ActiveRecord::Base
   ]
   
   
-  def self.display_year
-    '1870'
+  def display_name
+    "#{first_name} #{middle_initial} #{last_name}"
   end
+  
   
   def self.browsable_attributes
     self.accessible_attributes - SUPPRESSED_ATTRIBUTES

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Criterion:</b>
+  <%= @search.criterion %>
+</p>
+
+
+<div>
+	<b>Federal 1860 Census Entries:</b><br/>
+	<% @federal1860_census_entries.each do |entry| %>
+		<%= link_to(entry.display_name, federal1860_census_entry_path(entry)) %><br/>
+	<% end %>
+</div>
+
+
+<div>
+	<b>Federal 1870 Census Entries:</b><br/>
+	<% @federal1870_census_entries.each do |entry| %>
+		<%= link_to(entry.display_name, federal1870_census_entry_path(entry)) %><br/>
+	<% end %>
+</div>
+
+<div>
+	<b>Confederate Veterans:</b><br/>
+	<% @soldiers.each do |entry| %>
+		<%= link_to(entry.display_name, soldier_path(entry)) %><br/>
+	<% end %>
+</div>
+
+
+
+<%= link_to 'Edit', edit_search_path(@search) %> |
+<%= link_to 'Back', searches_path %>
