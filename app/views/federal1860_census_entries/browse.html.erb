@@ -5,7 +5,7 @@
 	<% Federal1860CensusEntry.browsable_attributes.each do |attr| %>
 	
 		<li>
-			<%= link_to(attr, federal1860_census_entries_browse_by_path(:field => attr)) %>
+			<%= link_to(attr.titleize, federal1860_census_entries_browse_by_path(:field => attr)) %>
 		</li>
 	
 	<% end %>

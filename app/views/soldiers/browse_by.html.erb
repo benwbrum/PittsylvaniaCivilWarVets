@@ -1,0 +1,33 @@
+<h2>Veteran Records by <%= @attribute_name.titleize %></h2>
+
+
+<table>
+	<thead>
+		<tr>
+			<th>
+				<%= @attribute_name.titleize %>
+			</th>
+			<th>
+				Number of Entries
+			</th>
+		</tr>
+	
+	</thead>
+	<tbody>
+		<% @value_total_pairs.each do |pair| %>
+		
+			<tr>
+				<td>
+					<%= pair['value'] %>
+				</td>
+				<td>
+					<%= link_to(pair['total'], soldiers_path(:filter_key => @attribute_name, :filter_value => pair['value'])) %>
+				</td>
+			
+			</tr>
+		
+		<% end %>
+	
+	</tbody>
+	
+</table>

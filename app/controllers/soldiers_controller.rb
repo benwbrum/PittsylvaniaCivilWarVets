@@ -2,7 +2,13 @@ class SoldiersController < ApplicationController
   # GET /soldiers
   # GET /soldiers.json
   def index
-    @soldiers = Soldier.all
+    if params['filter_key'].blank?
+      @soldiers = Soldier.all
+    else
+      @filter_column = params['filter_key']
+      @filter_value = params['filter_value']
+      @soldiers = Soldier.where(@filter_column => @filter_value)    
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -80,4 +86,17 @@ class SoldiersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  
+  def browse
+  
+  end
+  
+  def browse_by
+    @attribute_name = params['field']
+    @value_total_pairs = Soldier.browse_by(@attribute_name)
+  end
+  
+
+
 end

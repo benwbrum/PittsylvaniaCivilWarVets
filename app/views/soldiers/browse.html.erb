@@ -1,0 +1,13 @@
+<h2>Accessible Attributes</h2>
+
+
+<ul>
+	<% Soldier.browsable_attributes.each do |attr| %>
+	
+		<li>
+			<%= link_to(attr.titleize, soldiers_browse_by_path(:field => attr)) %>
+		</li>
+	
+	<% end %>
+	
+</ul>

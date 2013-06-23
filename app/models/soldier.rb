@@ -7,11 +7,33 @@ class Soldier < ActiveRecord::Base
   belongs_to :federal1860_census_entry
   belongs_to :federal1870_census_entry
   
+
+  SUPPRESSED_ATTRIBUTES = [
+    "",
+    "id",
+    "federal1860_census_entry_id",
+    "federal1870_census_entry_id",
+    ":federal1870_family_member_id"    
+  ]
+
   
   
   def display_name
     "#{name} "
   end
+
+
+  def self.browsable_attributes
+    self.accessible_attributes - SUPPRESSED_ATTRIBUTES
+  end
+  
+
+  def self.browse_by(attribute_name)
+    return self.select("#{attribute_name} as value, 
+                        count(*) total").group(attribute_name)
+  end
+
+
   
   
 end

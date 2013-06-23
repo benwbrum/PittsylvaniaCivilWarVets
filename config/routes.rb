@@ -3,6 +3,8 @@ PittsylvaniaCivilWarVets::Application.routes.draw do
   resources :searches
 
 
+  match 'soldiers/browse' => 'soldiers#browse'
+  match 'soldiers/browse_by' => 'soldiers#browse_by'
   resources :soldiers
 
 

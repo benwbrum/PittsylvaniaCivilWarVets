@@ -1,4 +1,11 @@
-<h1>Listing soldiers</h1>
+<h1>Confederate Veteran Service Records
+<% if @filter_column %>
+	with <%=@filter_column.titleize%>="<%=@filter_value%>"
+<% end %>
+
+
+
+</h1>
 
 <table>
   <tr>
@@ -37,7 +44,7 @@
 
 <% @soldiers.each do |soldier| %>
   <tr>
-    <td><%= soldier.name %></td>
+    <td><%= link_to soldier.name, soldier  %></td>
     <td><%= soldier.rank %></td>
     <td><%= soldier.regiment %></td>
     <td><%= soldier.company %></td>

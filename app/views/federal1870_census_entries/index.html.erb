@@ -1,4 +1,12 @@
-<h1>Listing federal1870_census_entries</h1>
+<h1>
+Entries in the Federal 1870 Census Entries for Pittsylvania County and Danville
+<% if @filter_column %>
+	with <%=@filter_column.titleize%>="<%=@filter_value%>"
+<% end %>
+
+
+
+</h1>
 
 <table>
   <tr>
