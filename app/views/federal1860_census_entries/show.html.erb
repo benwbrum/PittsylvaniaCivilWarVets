@@ -1,20 +1,68 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-	<% @federal1860_census_entry.class.displayable_attributes.each do |field| %>
-		<% value = @federal1860_census_entry[field] %>
-		<b><%= field.titleize %></b>:
-		<sup>
-			<%= link_to("i", 
-						federal1860_census_entries_browse_by_path(:field => field)) %>
-		 </sup>
-		<% if value.blank? %>
-			<i>blank</i>
-		<% else %> 
-			<%= link_to(value, 
-						federal1860_census_entries_path(:filter_key => field, :filter_value => value))
-			 %>
-		 <% end %>
-		<br/>
+<h2>
+	Federal 1860 Census Entry for <%= "#{@federal1860_census_entry.first_name} #{@federal1860_census_entry.middle_initial} #{@federal1860_census_entry.last_name}"%>
+</h2>	
+
+<div class="entry_container">
+	
+	<div class="nav_container_next_prev">
+		<%= link_to("Next Entry",
+					federal1860_census_entry_path(@federal1860_census_entry.next_entry))%>	
+		<%= link_to("Previous Entry",
+					federal1860_census_entry_path(@federal1860_census_entry.previous_entry))%>	
+	</div>
+	
+	<div id="attr_list">
+		<p>
+			<% @federal1860_census_entry.class.displayable_attributes.each do |field| %>
+				<% value = @federal1860_census_entry[field] %>
+				<b><%= field.titleize %></b>:
+				<sup>
+					<%= link_to("i", 
+								federal1860_census_entries_browse_by_path(:field => field)) %>
+				 </sup>
+				<% if value.blank? %>
+					<i>blank</i>
+				<% else %> 
+					<%= link_to(value, 
+								federal1860_census_entries_path(:filter_key => field, :filter_value => value))
+					 %>
+				 <% end %>
+				<br/>
+			<% end %>
+		</p>
+	</div>
+</div>
+
+<div id="cross_reference_container">
+	<% soldier = @federal1860_census_entry.soldier %>
+	<% if soldier %>
+		<h3>Cross References</h3>
+		<%= link_to("Service Record for #{soldier.name}",
+					soldier_path(soldier))%>
+		<% federal1870_census_entry = soldier.federal1870_census_entry %>
+		<% if federal1870_census_entry %>
+			<br />
+			<%= link_to("Federal 1870 Census Entry for #{federal1870_census_entry.first_name} #{federal1870_census_entry.middle_initial} #{federal1870_census_entry.last_name}",
+						federal1870_census_entry_path(@federal1860_census_entry.soldier.federal1870_census_entry))%>
+		<% end %>
 	<% end %>
-</p>
+</div>
+
+<div id="houshold_container">
+	<h3>Household</h3>
+
+	<div class="nav_container_next_prev">
+		<%= link_to("Next Household",
+					federal1860_census_entry_path(@federal1860_census_entry.head_of_next_household))%>	
+		<%= link_to("Previous Household",
+					federal1860_census_entry_path(@federal1860_census_entry.head_of_previous_household))%>	
+	</div>
+	<div id="household">
+		<%= render :partial => 'tabular', :locals => { :federal1860_census_entries => @federal1860_census_entry.household, :full_columns => false }%>
+
+
+	</div>
+
+</div>

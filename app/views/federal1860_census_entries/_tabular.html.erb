@@ -1,0 +1,88 @@
+
+<table>
+  <tr>
+    <% if full_columns %>
+	    <th>Id</th>
+	    <th>House number</th>
+	    <th>Family number</th>
+    <% end %>
+    <th>Last Name</th>
+    <th>First Name</th>
+    <th>Middle<br/>Initial</th>
+    <th>Age</th>
+    <th>Sex</th>
+    <th>Race</th>
+    <th>Occupation</th>
+    <th>Real<br/>Estate<br/>Owned</th>
+    <th>Personal<br/>Estate<br/>Owned</th>
+    <th>Place of Birth</th>
+    <th>Married<br/>within<br/>Year</th>
+    <th>School<br/>within<br/>Year</th>
+    <th>Illiterate</th>
+    <th>Other</th>
+    <% if full_columns %>
+		<th>District</th>
+	    <th>Post office</th>
+	    <th>Page number</th>
+	    <th>Written page number</th>
+	    <th>Notes</th>
+	    <th>Veteran</th>
+	    <th>Veteran or veteran family</th>
+	    <th>War experience</th>
+	    <th>Family structure</th>
+	    <th>Found in both</th>
+	    <th>Ldf vet or family</th>
+	    <th>Member of veteran family</th>
+	    <th>Member of veteran household</th>
+	    <th>Slaveholder 1860</th>
+	    <th>Slaveholding vet household 1860</th>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+    <% end %>
+  </tr>
+
+<% federal1860_census_entries.each do |federal1860_census_entry| %>
+  <tr>
+    <% if full_columns %>
+	    <td><%= link_to federal1860_census_entry.id, federal1860_census_entry %></td>
+	    <td><%= federal1860_census_entry.house_number %></td>
+	    <td><%= federal1860_census_entry.family_number %></td>
+    <% end %>
+    <td><%= federal1860_census_entry.last_name %></td>
+    <td><%= federal1860_census_entry.first_name %></td>
+    <td><%= federal1860_census_entry.middle_initial %></td>
+    <td><%= federal1860_census_entry.age %></td>
+    <td><%= federal1860_census_entry.sex %></td>
+    <td><%= federal1860_census_entry.race %></td>
+    <td><%= federal1860_census_entry.occupation %></td>
+    <td><%= federal1860_census_entry.real_estate_owned %></td>
+    <td><%= federal1860_census_entry.personal_estate_owned %></td>
+    <td><%= federal1860_census_entry.place_of_birth %></td>
+    <td><%= federal1860_census_entry.married_within_year==1 ? "Yes" : "No"  %></td>
+    <td><%= federal1860_census_entry.school_within_year==1 ? "Yes" : "No" %></td>
+    <td><%= federal1860_census_entry.illiterate==1 ? "Yes" : "No" %></td>
+    <td><%= federal1860_census_entry.other %></td>
+    <% if full_columns %>
+	    <td><%= federal1860_census_entry.district %></td>
+	    <td><%= federal1860_census_entry.post_office %></td>
+	    <td><%= federal1860_census_entry.page_number %></td>
+	    <td><%= federal1860_census_entry.written_page_number %></td>
+	    <td><%= federal1860_census_entry.notes %></td>
+	    <td><%= federal1860_census_entry.veteran %></td>
+	    <td><%= federal1860_census_entry.veteran_or_veteran_family %></td>
+	    <td><%= federal1860_census_entry.war_experience %></td>
+	    <td><%= federal1860_census_entry.family_structure %></td>
+	    <td><%= federal1860_census_entry.found_in_both %></td>
+	    <td><%= federal1860_census_entry.ldf_vet_or_family %></td>
+	    <td><%= federal1860_census_entry.member_of_veteran_family %></td>
+	    <td><%= federal1860_census_entry.member_of_veteran_household %></td>
+	    <td><%= federal1860_census_entry.slaveholder_1860 %></td>
+	    <td><%= federal1860_census_entry.slaveholding_vet_household_1860 %></td>
+	    <td><%= link_to 'Show', federal1860_census_entry %></td>
+	    <td><%= link_to 'Edit', edit_federal1860_census_entry_path(federal1860_census_entry) %></td>
+	    <td><%= link_to 'Destroy', federal1860_census_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
