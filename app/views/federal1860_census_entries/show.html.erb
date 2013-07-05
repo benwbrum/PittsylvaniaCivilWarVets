@@ -54,9 +54,9 @@
 	<h3>Household</h3>
 
 	<div class="nav_container_next_prev">
-		<%= link_to("Next Household",
+		<%= link_to("Next Household (#{@federal1860_census_entry.head_of_next_household.last_name})",
 					federal1860_census_entry_path(@federal1860_census_entry.head_of_next_household))%>	
-		<%= link_to("Previous Household",
+		<%= link_to("Previous Household (#{@federal1860_census_entry.head_of_previous_household.last_name})",
 					federal1860_census_entry_path(@federal1860_census_entry.head_of_previous_household))%>	
 	</div>
 	<div id="household">
