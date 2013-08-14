@@ -12,6 +12,17 @@ class Federal1860CensusEntry < ActiveRecord::Base
     "id"
   ]
 
+  FIRST_ORDERED_ATTRIBUTES = [
+    "last_name",
+    "first_name",
+    "middle_initial"
+  ]
+  
+  FINAL_ORDERED_ATTRIBUTES = [
+    "written_page_number"    
+  ]
+
+
 
   def household
     Federal1860CensusEntry.where(:district => self.district, :house_number => self.house_number).order(:id)
@@ -47,7 +58,13 @@ class Federal1860CensusEntry < ActiveRecord::Base
   end
   
   def self.displayable_attributes
-    self.accessible_attributes - SUPPRESSED_ATTRIBUTES
+    displayable_superset = self.accessible_attributes.to_a - SUPPRESSED_ATTRIBUTES
+    middle_subset = (displayable_superset - FIRST_ORDERED_ATTRIBUTES) - FINAL_ORDERED_ATTRIBUTES
+    displayable = FIRST_ORDERED_ATTRIBUTES
+    displayable += middle_subset
+    displayable += FINAL_ORDERED_ATTRIBUTES
+    logger.debug(displayable.inspect)    
+    displayable
   end
 
   def self.browse_by(attribute_name)

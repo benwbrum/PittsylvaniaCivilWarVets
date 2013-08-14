@@ -1,5 +1,6 @@
 
 <table>
+
   <tr>
     <% if full_columns %>
 	    <th>Id</th>
@@ -36,22 +37,19 @@
 	    <th>Member of veteran household</th>
 	    <th>Slaveholder 1860</th>
 	    <th>Slaveholding vet household 1860</th>
-	    <th></th>
-	    <th></th>
-	    <th></th>
     <% end %>
   </tr>
 
 <% federal1860_census_entries.each do |federal1860_census_entry| %>
-  <tr>
+  <tr data-link="<%= federal1860_census_entry_path(federal1860_census_entry) %>">
     <% if full_columns %>
 	    <td><%= link_to federal1860_census_entry.id, federal1860_census_entry %></td>
 	    <td><%= federal1860_census_entry.house_number %></td>
 	    <td><%= federal1860_census_entry.family_number %></td>
     <% end %>
-    <td><%= federal1860_census_entry.last_name %></td>
-    <td><%= federal1860_census_entry.first_name %></td>
-    <td><%= federal1860_census_entry.middle_initial %></td>
+    <td><%= link_to federal1860_census_entry.last_name, federal1860_census_entry %></td>
+    <td><%= link_to federal1860_census_entry.first_name, federal1860_census_entry %></td>
+    <td><%= link_to(federal1860_census_entry.middle_initial, federal1860_census_entry) unless federal1860_census_entry.middle_initial.blank? %></td>
     <td><%= federal1860_census_entry.age %></td>
     <td><%= federal1860_census_entry.sex %></td>
     <td><%= federal1860_census_entry.race %></td>
@@ -79,9 +77,6 @@
 	    <td><%= federal1860_census_entry.member_of_veteran_household %></td>
 	    <td><%= federal1860_census_entry.slaveholder_1860 %></td>
 	    <td><%= federal1860_census_entry.slaveholding_vet_household_1860 %></td>
-	    <td><%= link_to 'Show', federal1860_census_entry %></td>
-	    <td><%= link_to 'Edit', edit_federal1860_census_entry_path(federal1860_census_entry) %></td>
-	    <td><%= link_to 'Destroy', federal1860_census_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <% end %>
   </tr>
 <% end %>
