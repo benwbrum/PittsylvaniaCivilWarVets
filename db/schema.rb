@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131117132840) do
+ActiveRecord::Schema.define(:version => 20131118212651) do
 
   create_table "Paste Errors", :id => false, :force => true do |t|
     t.text "Field0", :limit => 255
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(:version => 20131117132840) do
     t.string  "member_of_veteran_household",     :limit => 1,   :default => "0",        :null => false
     t.string  "slaveholder_1860",                :limit => 1,   :default => "0",        :null => false
     t.string  "slaveholding_vet_household_1860", :limit => 1,   :default => "0",        :null => false
+    t.integer "census_image_id"
   end
 
   create_table "federal1870_census_entries", :id => false, :force => true do |t|
@@ -97,6 +98,7 @@ ActiveRecord::Schema.define(:version => 20131117132840) do
     t.string  "member_of_veteran_family",        :limit => 1,   :default => "0",        :null => false
     t.string  "slaveholding_vet_household_1860", :limit => 1,   :default => "0",        :null => false
     t.string  "slaveholder_1860",                :limit => 1,   :default => "0",        :null => false
+    t.integer "census_image_id"
   end
 
   create_table "searches", :force => true do |t|

@@ -5485,4 +5485,31 @@ census_files =
   "district"=>"Danville",
   "year"=>"1870"}]
   
+print "Deleting old CensusImage entries\n"
+CensusImage.delete_all
+  
+print "Loading new CensusImage entries\n"
 census_files.each { |a| CensusImage.create!(a) }
+
+print "Associating images with 1860 census entries\n"
+Federal1860CensusEntry.all.each do |entry|
+  image = CensusImage.where(:year => '1860', :district => entry.district, :page_number => entry.page_number).first
+  if image
+    entry.census_image = image
+    entry.save!
+  else
+    print "No image for 1860, #{entry.district}, page #{entry.page_number}\n"
+  end
+end
+
+print "Associating images with 1870 census entries\n"
+Federal1870CensusEntry.all.each do |entry|
+  image = CensusImage.where(:year => '1870', :district => entry.district, :page_number => entry.page_number).first
+  if image
+    entry.census_image = image
+    entry.save!
+  else
+    print "No image for 1870, #{entry.district}, page #{entry.page_number}\n"
+  end
+end
+
