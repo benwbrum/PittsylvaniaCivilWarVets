@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  filename: MyString
+  page_number: MyString
+  district: MyString
+  year: MyString
+
+two:
+  filename: MyString
+  page_number: MyString
+  district: MyString
+  year: MyString

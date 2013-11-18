@@ -1,0 +1,2 @@
+module CensusImagesHelper
+end

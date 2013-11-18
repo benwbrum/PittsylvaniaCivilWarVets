@@ -1,5 +1,8 @@
 PittsylvaniaCivilWarVets::Application.routes.draw do
 
+  resources :census_images
+
+
   resources :searches
 
 

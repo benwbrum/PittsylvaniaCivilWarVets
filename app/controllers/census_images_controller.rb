@@ -1,0 +1,2 @@
+class CensusImagesController < ApplicationController
+end

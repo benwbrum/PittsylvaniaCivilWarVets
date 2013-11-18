@@ -11,10 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130622111147) do
+ActiveRecord::Schema.define(:version => 20131117132840) do
 
   create_table "Paste Errors", :id => false, :force => true do |t|
     t.text "Field0", :limit => 255
+  end
+
+  create_table "census_images", :force => true do |t|
+    t.string   "filename"
+    t.string   "page_number"
+    t.string   "district"
+    t.string   "year"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "federal1860_census_entries", :id => false, :force => true do |t|
